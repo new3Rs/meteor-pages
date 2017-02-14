@@ -4,7 +4,9 @@ Meteor Pages
 State of the art, out of the box Meteor pagination
 --------------------------------------------------
 
-Live demos: 
+This is a infinite scroll bug-fixed version of alethes:pages@1.8.6.
+
+Live demos:
 
 Basic usage - [http://pages.meteor.com/](http://pages.meteor.com/)
 
@@ -128,8 +130,8 @@ Available to the client:
    - *true* - a router is used but the routes are configured separately by the user
    - *false* - no router used
    - *"iron-router"* - *iron-router* is used and the routes are automatically set up by *Pages*
-+ **routerTemplate (*String*, default = "pages")** - a template used by *iron-router* to generate paging 
-+ **routerLayout (*String*, default = "layout")** - a layout used by *iron-router* to generate paging 
++ **routerTemplate (*String*, default = "pages")** - a template used by *iron-router* to generate paging
++ **routerLayout (*String*, default = "layout")** - a layout used by *iron-router* to generate paging
 + **sort (*Object*, default = {})** - MongoDB sort determining object, eg. {name: 1}
 + **templateName (*String*, default = "")** - A name of the template to use. Defaults to the collection's name.
 
@@ -139,7 +141,7 @@ Unavailable to the client:
    - *subscription* - the Meteor subscription object (*this* in *Meteor.publish()*). **In authenticated connections, *subscription.userId* holds the currently signed-in user's *_id*. Otherwise, it's *null*.**
   The authorization function is called in the context of the *Pagination* object.
   The page number is not exposed because it shouldn't be necessary and page-dependent authorization rules would render calculation of the total number of pages ineffective. The total page count is needed for displaying navigation controls properly.
-  
+
   The authorization function should return one of the following:
    - *true* - grants unrestricted access to the paginated collection
    - a *falsy value* - denies access to the paginated collection

@@ -1,8 +1,8 @@
 Package.describe({
-  "name": "alethes:pages",
+  "name": "new3rs:pages",
   "summary": "State of the art, out of the box Meteor pagination",
-  "version": "1.8.6",
-  "git": "https://github.com/alethes/meteor-pages"
+  "version": "1.8.7",
+  "git": "https://github.com/new3Rs/meteor-pages"
 });
 
 Package.onUse(function(api){
